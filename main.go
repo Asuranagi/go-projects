@@ -9,14 +9,18 @@ type Bin struct {
 	name      string
 }
 type BinList struct {
+	id        string
+	private   bool
+	createdAt time.Time
+	name      string
 }
 
 func main() {
 
 }
-func bin() {
+func bin(*Bin) {
 	return
 }
-func binList() {
+func binList(*BinList) {
 	return
 }
