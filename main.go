@@ -8,7 +8,15 @@ type Bin struct {
 	createdAt time.Time
 	name      string
 }
+type BinList struct {
+}
 
 func main() {
 
+}
+func bin() {
+	return
+}
+func binList() {
+	return
 }
