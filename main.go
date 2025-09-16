@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type Bin struct {
 	id        string
@@ -16,11 +19,23 @@ type BinList struct {
 }
 
 func main() {
-
+	bin := NewBin("123", "egor", true)
+	binList := NewBinList("123", "Marta", false)
+	fmt.Println(bin, binList)
 }
-func bin(*Bin) {
-	return
+func NewBin(id, name string, private bool) *Bin {
+	return &Bin{
+		id:        id,
+		private:   private,
+		createdAt: time.Now(),
+		name:      name,
+	}
 }
-func binList(*BinList) {
-	return
+func NewBinList(id, name string, private bool) *BinList {
+	return &BinList{
+		id:        id,
+		private:   private,
+		createdAt: time.Now(),
+		name:      name,
+	}
 }
