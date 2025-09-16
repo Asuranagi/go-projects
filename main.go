@@ -6,16 +6,16 @@ import (
 )
 
 type Bin struct {
-	id        string
-	private   bool
-	createdAt time.Time
-	name      string
+	Id        string
+	Private   bool
+	CreatedAt time.Time
+	Name      string
 }
 type BinList struct {
-	id        string
-	private   bool
-	createdAt time.Time
-	name      string
+	Id        string
+	Private   bool
+	CreatedAt time.Time
+	Name      string
 }
 
 func main() {
@@ -25,17 +25,17 @@ func main() {
 }
 func NewBin(id, name string, private bool) *Bin {
 	return &Bin{
-		id:        id,
-		private:   private,
-		createdAt: time.Now(),
-		name:      name,
+		Id:        id,
+		Private:   private,
+		CreatedAt: time.Now(),
+		Name:      name,
 	}
 }
 func NewBinList(id, name string, private bool) *BinList {
 	return &BinList{
-		id:        id,
-		private:   private,
-		createdAt: time.Now(),
-		name:      name,
+		Id:        id,
+		Private:   private,
+		CreatedAt: time.Now(),
+		Name:      name,
 	}
 }
