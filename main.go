@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	file.ReadFiles("file.json")
-	file.IsJsonFile("file.json")
-	storage.ReadBinListFromJson("file.json")
+	FileService := file.NewFileService()
+	StorageService := storage.NewStorageService()
+	FileService.ReadFiles("file.json")
+	FileService.IsJsonFile("file.json")
+	StorageService.ReadBinListFromJson("file.json")
 }

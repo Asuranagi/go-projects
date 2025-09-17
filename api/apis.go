@@ -1,5 +1,14 @@
 package api
 
-func api() {
-	return
+type ApiService interface {
+	Api()
+}
+
+type ApiServiceImpl struct{}
+
+func NewApiService() ApiService {
+	return &ApiServiceImpl{}
+}
+
+func (a *ApiServiceImpl) Api() {
 }

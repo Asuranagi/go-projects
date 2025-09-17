@@ -6,18 +6,28 @@ import (
 	"strings"
 )
 
-func ReadFiles(name string) ([]byte, error) {
+type FileService interface {
+	ReadFiles(name string) ([]byte, error)
+	IsJsonFile(filename string) bool
+	WriteFile(content string, name string)
+}
+type FileServiceImpl struct{}
+
+func NewFileService() FileService {
+	return &FileServiceImpl{}
+}
+func (f *FileServiceImpl) ReadFiles(name string) ([]byte, error) {
 	data, err := os.ReadFile(name)
 	if err != nil {
 		return nil, err
 	}
 	return data, nil
 }
-func IsJsonFile(filename string) bool {
+
+func (f *FileServiceImpl) IsJsonFile(filename string) bool {
 	ext := strings.ToLower(filepath.Ext(filename))
 	return ext == ".json"
 }
-
-func WriteFile(content string, name string) {
+func (f *FileServiceImpl) WriteFile(content string, name string) {
 
 }
