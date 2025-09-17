@@ -1,5 +1,8 @@
 package file
 
-func file() {
-	return
+func ReadFile() {
+
+}
+func WriteFile() {
+
 }
