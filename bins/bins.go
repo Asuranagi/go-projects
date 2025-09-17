@@ -3,15 +3,15 @@ package bins
 import "time"
 
 type Bin struct {
-	Id        string    `json:name`
-	Private   bool      `json:name`
-	CreatedAt time.Time `json:name`
+	Id        string    `json:id`
+	Private   bool      `json:private`
+	CreatedAt time.Time `json:createdAt`
 	Name      string    `json:name`
 }
 type BinList struct {
-	Id        string    `json:name`
-	Private   bool      `json:name`
-	CreatedAt time.Time `json:name`
+	Id        string    `json:id`
+	Private   bool      `json:private`
+	CreatedAt time.Time `json:createdAt`
 	Name      string    `json:name`
 }
 
