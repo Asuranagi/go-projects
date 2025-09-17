@@ -1,4 +1,4 @@
-package bin
+package bins
 
 func bin() {
 	return
