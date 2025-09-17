@@ -1,8 +1,17 @@
 package file
 
-func ReadFile() {
+import (
+	"os"
+)
+
+func ReadFiles(name string) ([]byte, error) {
+	data, err := os.ReadFile(name)
+	if err != nil {
+		return nil, err
+	}
+	return data, nil
 
 }
-func WriteFile() {
+func WriteFile(content string, name string) {
 
 }
