@@ -1,14 +1,14 @@
 package main
 
-import "time"
-
-type Bin struct {
-	id        string
-	private   bool
-	createdAt time.Time
-	name      string
-}
+import (
+	"true-Pro/file"
+	"true-Pro/storage"
+)
 
 func main() {
-
+	FileService := file.NewFileService()
+	StorageService := storage.NewStorageService()
+	FileService.ReadFiles("file.json")
+	FileService.IsJsonFile("file.json")
+	StorageService.ReadBinListFromJson("file.json")
 }

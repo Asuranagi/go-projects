@@ -1,0 +1,33 @@
+package bins
+
+import "time"
+
+type Bin struct {
+	Id        string    `json:id`
+	Private   bool      `json:private`
+	CreatedAt time.Time `json:createdAt`
+	Name      string    `json:name`
+}
+type BinList struct {
+	Id        string    `json:id`
+	Private   bool      `json:private`
+	CreatedAt time.Time `json:createdAt`
+	Name      string    `json:name`
+}
+
+func NewBin(id, name string, private bool) *Bin {
+	return &Bin{
+		Id:        id,
+		Private:   private,
+		CreatedAt: time.Now(),
+		Name:      name,
+	}
+}
+func NewBinList(id, name string, private bool) *BinList {
+	return &BinList{
+		Id:        id,
+		Private:   private,
+		CreatedAt: time.Now(),
+		Name:      name,
+	}
+}
